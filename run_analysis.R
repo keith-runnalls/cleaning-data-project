@@ -68,7 +68,7 @@ merged_data <- bind_rows(test_data, train_data)
 # Extract the mean, -mean(), and standard deviation, -std(), variables:
 
 means_stds <- merged_data %>%
-  select(1:2, contains("-mean()"), contains("-std()"))
+              select(1:2, contains("-mean()"), contains("-std()"))
 
 # N.B. Variables that contain the word mean but are not means of a measurement are ignored.
 # e.g. fBodyAccMag-meanFreq() and angle(X,gravityMean) are not selected.  
@@ -79,23 +79,23 @@ means_stds <- merged_data %>%
 
 # Apply mutating join with activity_labels data frame using activity_code as key
 means_stds <- means_stds %>%
-  left_join(activity_labels, by = "activity_code")
+              left_join(activity_labels, by = "activity_code")
 
 # Move new activity column beside other grouping variables
 means_stds <- means_stds %>% 
-  relocate(activity, .after = activity_code)
+              relocate(activity, .after = activity_code)
 
 # Drop activity_code column
 means_stds <- means_stds %>%
-  select(!activity_code)
+              select(!activity_code)
 
 
 #===============================================================================
 # Summarize data as the average of each variable grouped by activity and subject
 
 processed_data <- means_stds %>%
-  group_by(activity, subject) %>%
-  summarise(across(everything(), mean, .names = "avg_{.col}"))
+                  group_by(activity, subject) %>%
+                  summarise(across(everything(), mean, .names = "avg_{.col}"))
 
 
 #===============================================================================
