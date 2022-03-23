@@ -1,6 +1,6 @@
-# Information about *processed_data.csv*
+# Information about *processed_data.txt*
 
-The tidy data produced by the *run_analysis.R* script is saved as *processed_data.csv*. This file contains 180 observations of 68 variables. There is one observation for each unique combination of activity and subject.
+The tidy data produced by the *run_analysis.R* script is saved as *processed_data.txt*. This file contains 180 observations of 68 variables. There is one observation for each unique combination of activity and subject.
 
 ${6}_{activities}\times{30}_{subjects}={180}_{observations}$
 

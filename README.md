@@ -4,9 +4,9 @@ This repository contains 3 files in addition to this README:
 
 -   *run_analysis.R* is an R script that performs the entire analysis
 
--   *processed_data.csv* is a tidy data set produced by run_analysis.R
+-   *processed_data.txt* is a tidy data set produced by run_analysis.R
 
--   *CodeBook.md* describes the contents of processed_data.csv
+-   *CodeBook.md* describes the contents of processed_data.txt
 
 ## What *run_analysis.R* does:
 
@@ -18,4 +18,4 @@ This repository contains 3 files in addition to this README:
 6.  Extracts the *mean* and *standard deviation* variables
 7.  Adds descriptive activity names
 8.  Averages the measured variables for each combination of activity and subject
-9.  Saves the resulting tidy data frame to the working directory as a .csv file
+9.  Saves the resulting tidy data frame to the working directory as a .txt file
