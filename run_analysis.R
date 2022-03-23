@@ -101,4 +101,4 @@ processed_data <- means_stds %>%
 #===============================================================================
 # Save summary data frame as output
 
-save(processed_data, file = "./processed_data.R")
+write_csv(processed_data, "./processed_data.csv")
